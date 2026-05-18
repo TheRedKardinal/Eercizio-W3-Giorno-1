@@ -78,17 +78,20 @@ console.log(quadrato(5));
 const persona = {
     nome: 'Donald',
     cognome: 'Duck',
-    eta: 28,
+    eta: 70,
     citta: 'Duckburg',
 };
 
-const { nome } = persona;
-const { cognome } = persona;
-const { citta } = persona;
 
-console.log(nome);
-console.log(cognome);
-console.log(citta);
+const { nome, cognome, citta } = persona;
+console.log(nome, cognome, citta);
+
+
+const users = utenti.map(({id, attivo, città, ...others}) => others);
+users.forEach((user) => {
+    const {nome, cognome, eta} = user;
+    console.log(nome, cognome, eta);
+});
 
 /* ESERCIZIO 3 — Destructuring nei parametri
    Scrivi una arrow function "riepilogo" che riceve un utente e ritorna
@@ -97,7 +100,7 @@ console.log(citta);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const riepilogo = ({ nome, cognome, eta }) => `${nome}, ${cognome}, ${eta}`;
+const riepilogo = ({ nome, cognome, eta }) => `${nome}, ${cognome}, (${eta} anni)`;
 
 console.log(riepilogo(utenti[0]));
 console.log(riepilogo(utenti[1]));
@@ -191,14 +194,19 @@ console.log(utentiPlus[0]);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const attivo = utenti.filter((utente) =>  utente.attivo;
 
+console.log(attivo);
 /* ESERCIZIO 11 — filter combinato
    Usa filter per ottenere solo gli utenti maggiorenni (eta >= 18) che vivono a Milano.
    Stampa l'array risultante.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+const majorAge = utenti.filter((utenti) => {
+utenti.eta >= 18 && utenye.città === 'Milano',
+});
+console.log(majorAge);
 /* ESERCIZIO 12 — find
    Usa find per trovare il primo utente con id === 4.
    Stampa l'oggetto.
