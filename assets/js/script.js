@@ -194,7 +194,7 @@ console.log(utentiPlus[0]);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const attivo = utenti.filter((utente) =>  utente.attivo;
+const attivo = utenti.filter((utente) =>  utente.attivo);
 
 console.log(attivo);
 /* ESERCIZIO 11 — filter combinato
@@ -203,16 +203,19 @@ console.log(attivo);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const majorAge = utenti.filter((utenti) => {
+ /* const majorAge = utenti.filter((utenti) => {
 utenti.eta >= 18 && utenye.città === 'Milano',
 });
-console.log(majorAge);
+console.log(majorAge); */
+
 /* ESERCIZIO 12 — find
    Usa find per trovare il primo utente con id === 4.
    Stampa l'oggetto.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const found = utenti.find(({id}) => id === 4);
+console.log(found);
 
 /* ESERCIZIO 13 — reduce
    a) Usa reduce per calcolare l'età media (somma età / numero utenti). Stampa.
@@ -227,6 +230,11 @@ console.log(majorAge);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const etaCrescente = utenti.sort((a, b) => a.eta - b.eta );
+console.log(etaCrescente);
+
+const ordineAlfabetico = utenti.sort((a, b) => a.nome.localeCompare(b.nome));
+console.log(ordineAlfabetico);
 
 /* ESERCIZIO 15 — Chaining
    Componi una catena di metodi che:
