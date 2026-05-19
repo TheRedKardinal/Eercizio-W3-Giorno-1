@@ -7,54 +7,54 @@
 */
 
 const utenti = [
-    {
-        id: 1,
-        nome: 'Mario',
-        cognome: 'Rossi',
-        eta: 28,
-        attivo: true,
-        città: 'Milano',
-    },
-    {
-        id: 2,
-        nome: 'Anna',
-        cognome: 'Bianchi',
-        eta: 35,
-        attivo: false,
-        città: 'Roma',
-    },
-    {
-        id: 3,
-        nome: 'Luca',
-        cognome: 'Verdi',
-        eta: 22,
-        attivo: true,
-        città: 'Milano',
-    },
-    {
-        id: 4,
-        nome: 'Sara',
-        cognome: 'Neri',
-        eta: 17,
-        attivo: true,
-        città: 'Torino',
-    },
-    {
-        id: 5,
-        nome: 'Marco',
-        cognome: 'Gialli',
-        eta: 45,
-        attivo: false,
-        città: 'Roma',
-    },
-    {
-        id: 6,
-        nome: 'Chiara',
-        cognome: 'Rosa',
-        eta: 30,
-        attivo: true,
-        città: 'Milano',
-    },
+   {
+      id: 1,
+      nome: 'Mario',
+      cognome: 'Rossi',
+      eta: 28,
+      attivo: true,
+      città: 'Milano',
+   },
+   {
+      id: 2,
+      nome: 'Anna',
+      cognome: 'Bianchi',
+      eta: 35,
+      attivo: false,
+      città: 'Roma',
+   },
+   {
+      id: 3,
+      nome: 'Luca',
+      cognome: 'Verdi',
+      eta: 22,
+      attivo: true,
+      città: 'Milano',
+   },
+   {
+      id: 4,
+      nome: 'Sara',
+      cognome: 'Neri',
+      eta: 17,
+      attivo: true,
+      città: 'Torino',
+   },
+   {
+      id: 5,
+      nome: 'Marco',
+      cognome: 'Gialli',
+      eta: 45,
+      attivo: false,
+      città: 'Roma',
+   },
+   {
+      id: 6,
+      nome: 'Chiara',
+      cognome: 'Rosa',
+      eta: 30,
+      attivo: true,
+      città: 'Milano',
+   },
 ];
 
 /* ESERCIZIO 1 — Arrow function compatta
@@ -76,10 +76,10 @@ console.log(quadrato(5));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 const persona = {
-    nome: 'Donald',
-    cognome: 'Duck',
-    eta: 70,
-    citta: 'Duckburg',
+   nome: 'Donald',
+   cognome: 'Duck',
+   eta: 70,
+   citta: 'Duckburg',
 };
 
 
@@ -87,10 +87,10 @@ const { nome, cognome, citta } = persona;
 console.log(nome, cognome, citta);
 
 
-const users = utenti.map(({id, attivo, città, ...others}) => others);
+const users = utenti.map(({ id, attivo, città, ...others }) => others);
 users.forEach((user) => {
-    const {nome, cognome, eta} = user;
-    console.log(nome, cognome, eta);
+   const { nome, cognome, eta } = user;
+   console.log(nome, cognome, eta);
 });
 
 /* ESERCIZIO 3 — Destructuring nei parametri
@@ -141,11 +141,11 @@ console.log(cibo);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 const prodotto = {
-nome: "Cuffie",
-prezzo: 79.99
+   nome: "Cuffie",
+   prezzo: 79.99
 };
 
-const nuovoProdotto = {...prodotto};
+const nuovoProdotto = { ...prodotto };
 nuovoProdotto.disponibile = true;
 
 console.log(nuovoProdotto);
@@ -157,8 +157,8 @@ console.log(prodotto);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-utenti.forEach(({nome, cognome, città}) => {
-    console.log(`- ${nome}, ${cognome}, ${città}`);
+utenti.forEach(({ nome, cognome, città }) => {
+   console.log(`- ${nome}, ${cognome}, ${città}`);
 });
 
 /* ESERCIZIO 8 — map a stringhe
@@ -167,8 +167,8 @@ utenti.forEach(({nome, cognome, città}) => {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const nomiCompleti = utenti.map(({nome, cognome}) => {
-console.log(`${nome} ${cognome}`);
+const nomiCompleti = utenti.map(({ nome, cognome }) => {
+   console.log(`${nome} ${cognome}`);
 });
 
 /* ESERCIZIO 9 — map a oggetti
@@ -181,8 +181,8 @@ console.log(`${nome} ${cognome}`);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 const utentiPlus = utenti.map((utenti) => ({
-utenti,
-descrizione: `${utenti.nome} ${utenti.cognome}, ${utenti.città}`
+   utenti,
+   descrizione: `${utenti.nome} ${utenti.cognome}, ${utenti.città}`
 }));
 
 console.log(utentiPlus[0]);
@@ -194,7 +194,7 @@ console.log(utentiPlus[0]);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const attivo = utenti.filter((utente) =>  utente.attivo);
+const attivo = utenti.filter((utente) => utente.attivo);
 
 console.log(attivo);
 /* ESERCIZIO 11 — filter combinato
@@ -203,10 +203,10 @@ console.log(attivo);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
- /* const majorAge = utenti.filter((utenti) => {
-utenti.eta >= 18 && utenye.città === 'Milano',
+const majorAge = utenti.filter((utenti) => {
+   utenti.eta >= 18 && utenti.città === 'Milano'
 });
-console.log(majorAge); */
+console.log(majorAge);
 
 /* ESERCIZIO 12 — find
    Usa find per trovare il primo utente con id === 4.
@@ -214,7 +214,7 @@ console.log(majorAge); */
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const found = utenti.find(({id}) => id === 4);
+const found = utenti.find(({ id }) => id === 4);
 console.log(found);
 
 /* ESERCIZIO 13 — reduce
@@ -223,6 +223,9 @@ console.log(found);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const sumAge = utenti.reduce((acc, user) => acc + user.eta, 0);
+const averageAge = sumAge / utenti.length;
+console.log(`Età media: ${Number(averageAge.toFixed(2))}`);
 
 /* ESERCIZIO 14 — sort
    a) Ordina gli utenti per eta crescente. Stampa l'array di nomi nell'ordine.
@@ -230,12 +233,15 @@ console.log(found);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const etaCrescente = utenti.sort((a, b) => a.eta - b.eta );
+const etaCrescente = utenti.sort((a, b) => a.eta - b.eta);
 console.log(etaCrescente);
 
 const ordineAlfabetico = utenti.sort((a, b) => a.nome.localeCompare(b.nome));
 console.log(ordineAlfabetico);
 
+// Modo alternativo
+const alfabetico = utenti.map((utenti) => utenti.nome).sort();
+console.log(alfabetico);
 /* ESERCIZIO 15 — Chaining
    Componi una catena di metodi che:
    - filtra gli utenti attivi
@@ -245,3 +251,6 @@ console.log(ordineAlfabetico);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const chaining = utenti.filter((utenti) => utenti.attivo).map((utenti) => `${utenti.nome} ${utenti.cognome}`).sort();
+
+console.log(chaining);
